@@ -43,11 +43,51 @@
     align-items: center;
     padding: 0.5rem;
     border-bottom: 1px solid #eee;
+    word-wrap: break-word;
+    flex-wrap: wrap; 
+  }
+
+
+  .buttonGroup {
+    display: flex;
+    gap: 30px; 
+    margin-left: auto; 
   }
   
-  .deleteButton {
-    background: none;
-    border: none;
-    color: #e74c3c;
-    cursor: pointer;
-  }
+  .deleteButton,
+.editButton,
+.completeButton,
+.saveButton {
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.deleteButton:hover,
+.editButton:hover,
+.completeButton:hover,
+.saveButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.editButton {
+  background-color: #ffc107;
+}
+
+.completeButton {
+  background-color: #28a745;
+}
+
+.saveButton {
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: #007bff;
+}
+
+.deleteButton {
+  background-color: #e74c3c;
+}
